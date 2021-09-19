@@ -7,8 +7,8 @@ module.exports = async function(context, req) {
   const msg = {
     to: 'simona.cotin@gmail.com',
     from: 'simona_cotin@yahoo.com',
-    subject: `${req.body.name} sent you a message`,
-    text: `Checkout this new message coming from your website! ${req.body.message}`,
+    subject: `${req.body.values.name} sent you a message`,
+    text: `Checkout this new message coming from your website! ${req.body.values.message}`,
     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   }
   sgMail.send(msg)
