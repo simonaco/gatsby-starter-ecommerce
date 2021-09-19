@@ -11,13 +11,29 @@ module.exports = async function(context, req) {
     text: `Checkout this new message coming from your website! ${req.body.values.message}`,
     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   }
-  sgMail.send(msg)
-
-  context.res = {
-    // status: 200, /* Defaults to 200 */
-    body: {
-      message:
-        'Thank you for your email, we are going to get back to you in just a bit!',
+  context.log(msg)
+  sgMail.send(msg).then(
+    () => {
+      context.res = {
+        // status: 200, /* Defaults to 200 */
+        body: {
+          message:
+            'Thank you for your email, we are going to get back to you in just a bit!',
+        },
+      }
     },
-  }
+    error => {
+      context.log(error)
+      if (error.response) {
+        context.error(error.response.body)
+      }
+      context.res = {
+        status: 500,
+        body: {
+          message:
+            'Thank you for your email, we are experiencing some errors on the backend. Please try again soon',
+        },
+      }
+    },
+  )
 }
