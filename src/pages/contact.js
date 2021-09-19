@@ -15,7 +15,10 @@ const ContactPage = ({location}) => {
       body: JSON.stringify({values}),
     })
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => {
+        console.log(response)
+        setLoading(false)
+      })
       .catch(error => {
         setLoading(false)
         setApiError(error.errors || error)
