@@ -75,6 +75,7 @@
     "url": "git+https://github.com/parmsang/gatsby-starter-ecommerce.git"
   },
   "scripts": {
+    "start": "rimraf .cache && gatsby develop",
     "dev": "gatsby develop",
     "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",

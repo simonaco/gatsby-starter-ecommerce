@@ -13,5 +13,6 @@ module.exports = async function(context, req) {
   }
   context.log(msg)
   const response = await sgMail.send(msg)
+  context.log(response)
   context.res.json(response.data)
 }
