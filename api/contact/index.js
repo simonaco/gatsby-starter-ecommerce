@@ -12,28 +12,6 @@ module.exports = async function(context, req) {
     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   }
   context.log(msg)
-  sgMail.send(msg).then(
-    () => {
-      context.res = {
-        // status: 200, /* Defaults to 200 */
-        body: {
-          message:
-            'Thank you for your email, we are going to get back to you in just a bit!',
-        },
-      }
-    },
-    error => {
-      context.log(error)
-      if (error.response) {
-        context.error(error.response.body)
-      }
-      context.res = {
-        status: 500,
-        body: {
-          message:
-            'Thank you for your email, we are experiencing some errors on the backend. Please try again soon',
-        },
-      }
-    },
-  )
+  const response = await sgMail.send(msg)
+  context.res.json(response.data)
 }
