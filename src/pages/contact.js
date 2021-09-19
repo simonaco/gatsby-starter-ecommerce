@@ -14,9 +14,8 @@ const ContactPage = ({location}) => {
       method: 'POST',
       body: JSON.stringify({values}),
     })
-      .then(response => response.json())
       .then(response => {
-        console.log(response)
+        console.log(response.body)
         setLoading(false)
       })
       .catch(error => {
