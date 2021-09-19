@@ -9,10 +9,14 @@ module.exports = async function(context, req) {
     from: 'simona.cotin@gmail.com',
     subject: `${req.body.values.name} sent you a message`,
     text: `Checkout this new message coming from your website! ${req.body.values.message}`,
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   }
   context.log(msg)
-  const response = await sgMail.send(msg)
-  context.log(response)
-  context.res.json(response.body)
+  try {
+    const response = await sgMail.send(msg)
+    context.log(response[0].statusCode)
+    context.res.json('Email Sent')
+  } catch (e) {
+    context.log(e)
+    context.res.status(500).json(e)
+  }
 }
