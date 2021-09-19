@@ -6,7 +6,7 @@ module.exports = async function(context, req) {
   context.log(req.body)
   const msg = {
     to: 'simona.cotin@gmail.com',
-    from: 'simona_cotin@yahoo.com',
+    from: 'simona.cotin@gmail.com',
     subject: `${req.body.values.name} sent you a message`,
     text: `Checkout this new message coming from your website! ${req.body.values.message}`,
     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
