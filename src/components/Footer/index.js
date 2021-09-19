@@ -39,6 +39,9 @@ const Footer = () => (
               <List.Item as={Link} to="/terms/">
                 Terms
               </List.Item>
+              <List.Item as={Link} to="/contact/">
+                Contact
+              </List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={5}>
