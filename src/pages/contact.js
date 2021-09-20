@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {navigate} from 'gatsby'
 import {Header, Message, Form, Segment, Input, Button} from 'semantic-ui-react'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
@@ -16,7 +17,7 @@ const ContactPage = ({location}) => {
     })
       .then(response => {
         console.log(response.body)
-        setLoading(false)
+        navigate('/')
       })
       .catch(error => {
         setLoading(false)
