@@ -1,6 +1,8 @@
+/* eslint-disable func-names */
 const sgMail = require('@sendgrid/mail')
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
 module.exports = async function(context, req) {
   context.log('JavaScript HTTP trigger function processed a request.')
   context.log(req.body)
