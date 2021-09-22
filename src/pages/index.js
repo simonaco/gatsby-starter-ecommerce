@@ -47,7 +47,7 @@ const StoreIndex = ({location}) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
   const products = get(data, 'allMoltinProduct.edges')
   const filterProductsWithoutImages = products.filter(v => v.node.mainImageHref)
-  console.log(process.env.SUPABASE_TOKEN)
+  console.log(process.env.SUPABASE)
   return (
     <Layout location={location}>
       <SEO title={siteTitle} />
