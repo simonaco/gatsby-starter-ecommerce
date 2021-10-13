@@ -34,7 +34,7 @@
     {
 			"type": "shell",
 			"label": "swa start",
-			"command": "swa start http://localhost:8000/ --api http://localhost:7071 --run \"npm start\" --devserver-timeout 60000",
+			"command": "swa start http://localhost:8000/ --api-location http://localhost:7071 --run \"npm start\" --devserver-timeout 60000",
 			"isBackground": true,
 			"problemMatcher": [
 				{
