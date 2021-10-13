@@ -9,6 +9,7 @@
   "dependencies": {
     "@moltin/gatsby-source-moltin": "^1.9.1",
     "@moltin/sdk": "^3.24.1",
+    "@sendgrid/mail": "^7.4.7",
     "eslint-plugin-jest": "^22.21.0",
     "gatsby": "^2.29.3",
     "gatsby-cli": "^2.16.2",
