@@ -55,5 +55,6 @@
         "cwd": "${workspaceFolder}/api"
       }
     }
+
   ]
 }
