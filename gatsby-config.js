@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'I Enjoy Lamp',
     author: 'Simona Cotin',
-    description: 'Your everyday lamp shop',
+    description: 'lamp shops rock!',
     siteUrl: 'https://github.com/simonaco/gatsby-starter-ecommerce',
   },
   pathPrefix: '/gatsby-starter-ecommerce',
