@@ -1,13 +1,1 @@
-{"networking": {
-    "allowedIpRanges": ["AzureFrontDoor.Backend"]
-  },
-  "forwardingGateway": {
-    "requiredHeaders": {
-      "X-Azure-FDID" : "839f9ac4-d688-42b3-947f-f3fcae5e472b"
-    },
-    "allowedForwardedHosts": [
-      "gatsby-commerce.azurefd.net"
-    ]
-  }
 
-}
