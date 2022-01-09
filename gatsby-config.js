@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'I Enjoy Lamp',
+    title: 'Hygge - contact',
     author: 'Simona Cotin',
     description: 'lamp shops rock!',
     siteUrl: 'https://github.com/simonaco/gatsby-starter-ecommerce',

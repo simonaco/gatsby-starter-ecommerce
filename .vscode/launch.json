@@ -10,7 +10,6 @@
             ],
             "type": "pwa-node"
         },
-
         {
             "name": "Launch Edge",
             "request": "launch",
@@ -28,12 +27,7 @@
             "type": "node",
             "request": "attach",
             "port": 9229,
-            "preLaunchTask": "func: host start",
-            "presentation": {
-                
-                "group": "",
-                "order": 1
-            }
+            "preLaunchTask": "func: host start"
         }
     ],
     "compounds": [
